@@ -2,6 +2,7 @@
 :root{
   --bg-white-fake: #f8f9fa;
   --bg-input : #e5e5e5;
+  --bg-chip: #165bba;
 }
 
 body{
@@ -22,6 +23,13 @@ img{
   width: 100%;
   height: calc(100vh - 70px);
 }
+
+.chip{
+  background-color: var(--bg-chip);
+  padding: 3px 8px;
+  border-radius: 30px;
+}
+
 
 /*************** HEADER *******************/
 header{
@@ -50,6 +58,14 @@ header .navbar  input{
 }
 
 
+header .navbar .right i{
+  color: #5b5858;
+}
+
+header .navbar .right .fa-bell{
+  color: #ff8f00;
+}
+
 
 /**************** SIDEBAR *****************/
 
@@ -65,7 +81,20 @@ header .navbar  input{
   overflow: scroll;
 }
 
+
+/********** HEADER MAIN CONTENT **********/
 .main-content .content-header{
   height: 120px;
   background-color: #1b72e8;
+}
+
+.main-content .content-header .online-users{
+  font-size: 2rem;
+}
+
+.main-content .content-header .icon{
+  border: 1px solid white;
+  padding: 5px;
+  margin-left: 15px;
+  border-radius: 5px;
 }
