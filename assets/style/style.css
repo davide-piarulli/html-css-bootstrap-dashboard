@@ -98,3 +98,16 @@ header .navbar .right .fa-bell{
   margin-left: 15px;
   border-radius: 5px;
 }
+
+/************** CONTENT BODY ***************/
+
+.content-body .table .icons {
+  transform: translateX(-10px);
+}
+
+.content-body .table i{
+  border: 1px solid grey;
+  padding: 7px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
