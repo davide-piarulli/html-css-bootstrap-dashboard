@@ -149,3 +149,7 @@ header .right .fa-bell{
   width: 30px;
   margin: 0 10px;
 }
+
+.content-body .users-title{
+  padding: 20px 17px;
+}
