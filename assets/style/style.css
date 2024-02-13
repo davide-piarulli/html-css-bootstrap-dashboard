@@ -7,7 +7,6 @@
 
 body{
   font-family: 'Roboto', sans-serif;
-  height: 100vh;
   width: 100vw;
 }
 
@@ -78,11 +77,13 @@ header .navbar .right .fa-bell{
 
 /*********** MAIN CONTENT ******************/
 .main-content{
-  overflow: scroll;
+  overflow: auto;
+  height: 100%;
 }
 
 
 /********** HEADER MAIN CONTENT **********/
+
 .main-content .content-header{
   height: 120px;
   background-color: #1b72e8;
@@ -100,6 +101,8 @@ header .navbar .right .fa-bell{
 }
 
 /************** CONTENT BODY ***************/
+
+
 
 .content-body .table .icons {
   transform: translateX(-10px);
