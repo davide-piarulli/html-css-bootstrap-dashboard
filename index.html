@@ -23,48 +23,51 @@
 
 
 <body>
-  <header class="debug">
+  <header>
     <!-- pensare di fare navbar senza bootstrap ed usando flex con 3 blocchi -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid d-block ">
-        <div class="row d-flex">
-          <div class="col-1   debug">
-            <a class="navbar-brand" href="#">
-              <img src="assets/img/logo.svg" alt="desktop-logo" class="d-none  d-lg-block">
-              <img src="assets/img/mobile-logo.png" alt="mobile-logo" class="d-lg-none">
-            </a>
+    <div class="row d-flex h-100 ">
 
-          </div>
-          <div class="col-10">
-            <div class="searchbar">
-              
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input class="form-control me-2 input-icon" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
-                
-            </div>
+      <!-- left -->
+      <div class="side left debug ">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/logo.svg" alt="desktop-logo" class="d-none  d-lg-block">
+          <img src="assets/img/mobile-logo.png" alt="mobile-logo" class="d-lg-none">
+        </a>
+      </div>
+      <!-- /left -->
 
-          </div>
-          <div class="col-1 right debug">
-            <i class="fa-solid fa-list"></i>
-            <i class="fa-solid fa-circle-question"></i>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-            <div class="dropdown d-inline ">
-              <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-bell"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profilo</a></li>
-                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-
+      <!-- middle -->
+      <div class="middle debug">
+        <div class="searchbar">
+          
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="form-control me-2 input-icon" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+          
         </div>
       </div>
-    </nav>
+      <!-- /middle -->
+
+      <!-- right -->
+      <div class="side right debug d-flex justify-content-around">
+        <div>
+          <i class="fa-solid fa-list"></i>
+          <i class="fa-solid fa-circle-question"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div class="dropdown d-inline ">
+          <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profilo</a></li>
+            <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+        <!-- /right -->
+    
   </header>
 
   <main>
@@ -72,35 +75,36 @@
     <div class="dp-container debug d-flex ">
       
       <!-- LEFT SIDEBAR -->
-      <div class="sidebar debug">
-        <!-- FIXME: far funzionare il justify between -->
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white justify-content-between h-100 ">
-          
+      <div class="sidebar d-flex flex-column justify-content-between  flex-shrink-0  text-white h-100 ">
+        
           <!-- top sidebar -->
           <div>
-            <ul class="nav nav-pills flex-column mb-auto">
+            <ul class="nav nav-pills flex-column mt-2 ">
               <li class="nav-item">
-                <a href="#" class="nav-link text-white">Home<a>
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-house"></i>Home<a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">Dashboard</a>
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-chart-simple"></i>Dashboard</a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">Orders</a>
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-signal"></i>Orders</a>
               </li>
             </ul>
           </div>
           
           <!-- bottom sidebar -->
           <div>
-            <ul class="nav nav-pills mb-auto">
+            <ul class="nav nav-pills flex-column mt-2 ">
               <li class="nav-item">
-                <a href="#" class="nav-link text-white">Admin<a>
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-gear"></i>Admin</a>
               </li>
             </ul>
           </div>
               
-        </div>
       </div>
       <!-- / LEFT SIDEBAR -->
 
@@ -133,13 +137,102 @@
             
             <div class="col-3 d-flex align-content-center h-100  debug">
               <p>Nuovo Studente</p>
-              <div class="add-user ">
-                <div class="icon">
-                  <i class="fa-solid fa-plus"></i>
-                </div>
+              <button class="dp-btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inserisci un nuovo studente</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <form>
+
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome">         
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="mb-3">
+                        <label for="cognome" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="cognome">         
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-8">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1">         
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="indirizzo" class="form-label">Indirizzo</label>
+                    <input type="text" class="form-control" id="indirizzo">         
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="citta" class="form-label">Città</label>
+                        <input type="text" class="form-control" id="citta">         
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <label for="stato" class="form-label">Stato</label>
+                      <div class="dropdown mb-3">
+                          <button class="btn border border-1 bg-white dropdown-toggle w-100 " type="button" data-bs-toggle="dropdown" aria-expanded="false" id="stato">
+                            Scegli..
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Italia</a></li>
+                            <li><a class="dropdown-item" href="#">Spagna</a></li>
+                            <li><a class="dropdown-item" href="#">Regno Unito</a></li>
+                          </ul>
+                            
+                      </div>
+                    </div>
+                    <div class="col-2">
+                      <div class="mb-3">
+                        <label for="cap" class="form-label">CAP</label>
+                        <input type="text" class="form-control" id="cap">         
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="foto" class="form-label">Foto</label>
+                    <input type="text" class="form-control" id="foto" placeholder="Nessun file selezionato">         
+                  </div>
+
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Seleziona per proseguire</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Salva</button>
+                  <button type="reset" class="btn btn-warning">Svuota</button>
+                </form>
               </div>
             </div>
+
+          
+          
           </div>
+        </div>
+      
           
         </div>
         <!-- /content header -->
@@ -382,6 +475,8 @@
                 
                 <div class="card m-3">
                   <img src="assets/img/stats.jpeg" alt="">
+                  <h5 class="card-title">Utenti attivi</h5>
+                  <p class="card-text ">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">Gennaio: 1200</li>
                     <li class="list-group-item">Febbraio: 800</li>

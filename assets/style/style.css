@@ -35,7 +35,19 @@ header{
   height: 70px;
 }
 
-header .navbar{
+header .row{
+  line-height: 70px;
+}
+
+header .side{
+  width: 10%;
+}
+
+header .middle{
+  width: 80%;
+}
+
+header {
   background-color: var(--bg-white-fake);
 }
 
@@ -44,24 +56,25 @@ header .searchbar{
 }
 
 header .searchbar i {
-  height:15px;
+  /* height:15px; */
   position:absolute;
   left:5px;
   top:10px;
 }
 
-header .navbar  input{
+header .searchbar  input{
   background-color: var(--bg-input);
   width: 100%;
   padding-left: 25px;
 }
 
 
-header .navbar .right i{
+header .right i{
   color: #5b5858;
+  margin: 5px;
 }
 
-header .navbar .right .fa-bell{
+header .right .fa-bell{
   color: #ff8f00;
 }
 
@@ -70,9 +83,16 @@ header .navbar .right .fa-bell{
 
 .sidebar{
   width: 150px;
-  height: 100%;
   background-color: #13293f;
   /* background: url(../img/sidebar-bg.png); */
+}
+
+.sidebar i{
+  padding: 10px;
+}
+
+.sidebar li:hover{
+  background-color: #355c82;
 }
 
 /*********** MAIN CONTENT ******************/
@@ -93,11 +113,19 @@ header .navbar .right .fa-bell{
   font-size: 2rem;
 }
 
-.main-content .content-header .icon{
+.main-content .content-header .dp-btn{
   border: 1px solid white;
+  background-color: #1b72e8;
+  color: white;
+  height: 35px;
+  width: 35px;
   padding: 5px;
   margin-left: 15px;
   border-radius: 5px;
+}
+
+.main-content .content-header .offcanvas {
+  width: 800px;
 }
 
 /************** CONTENT BODY ***************/
