@@ -109,6 +109,11 @@ header .right .fa-bell{
   background-color: #1b72e8;
 }
 
+.main-content .content-header .chip:hover{
+  background-color: #023986;
+
+}
+
 .main-content .content-header .online-users{
   font-size: 2rem;
 }
@@ -122,6 +127,10 @@ header .right .fa-bell{
   padding: 5px;
   margin-left: 15px;
   border-radius: 5px;
+}
+
+.main-content .content-header .dp-btn:hover{
+  background-color: #023986;
 }
 
 .main-content .content-header .offcanvas {
