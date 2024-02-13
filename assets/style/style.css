@@ -105,9 +105,7 @@ header .navbar .right .fa-bell{
   transform: translateX(-10px);
 }
 
-.content-body .table i{
-  border: 1px solid grey;
-  padding: 7px;
-  margin-right: 5px;
-  border-radius: 5px;
+.content-body .table img{
+  width: 30px;
+  margin: 0 10px;
 }
